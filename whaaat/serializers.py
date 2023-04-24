@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import File
+from whaaat.models import File
 # remember to import the File model
 
 class FileUploadSerializer(serializers.Serializer):
