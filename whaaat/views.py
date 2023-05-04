@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from rest_framework import generics
 import io, csv, pandas as pd
 from rest_framework.response import Response
 from serializers import FileUploadSerializer, SaveFileSerializer
 from models import File
+
 # remember to import the File model
 # remember to import the FileUploadSerializer and SaveFileSerializer
 
