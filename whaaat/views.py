@@ -8,7 +8,7 @@ import io, csv, pandas as pd
 from rest_framework.response import Response
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from base.forms import RegistrationForm, LoginForm
+from whaaat.forms import RegistrationForm, LoginForm
 import csv
 from .models import Payment
 from django.contrib import messages

@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from base.views import home, register, user_login, logout_view, FileUploadView, SummaryView
+from whaaat.views import home, register, user_login, logout_view, FileUploadView, SummaryView
 from django.conf import settings
 from django.conf.urls.static import static
 
