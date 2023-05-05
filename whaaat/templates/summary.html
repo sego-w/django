@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for name, amount in summary.items %}
+        <tr>
+          <td>{{ name }}</td>
+          <td>{{ amount }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

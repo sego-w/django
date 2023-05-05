@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Are you sure?</h3>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <button onclick="history.back()">Cancel</button>
+{% endblock %}

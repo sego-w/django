@@ -1,0 +1,32 @@
+<html lang="en">
+  <h1>DebtCalc</h1>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} Debtcalc </title>
+  </head>
+  <body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated %} 
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label for="csvfile">Upload .csv file:</label>
+          <input type="file" name="csvfile" id="csvfile">
+          <button type="submit">Upload</button>
+        </form>
+        <div style="display: block;">
+          <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        {% else %}
+        <div style="display: block;">
+          <a href="{% url 'login' %}">Login</a>
+        </div>
+        <div style="display: block;">
+          <a href="{% url 'register' %}">Register</a>
+        </div>
+        {% endif %}
+    </nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
